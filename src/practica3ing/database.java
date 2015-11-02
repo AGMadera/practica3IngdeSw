@@ -15,7 +15,7 @@ public class database {
   private String bd = "mysql";//BASE DE DATOS
   private String login = "root"; //USUARIO
   private String password = "root"; //CONTRASEÑA
-  private String url = "jdbc:mysql://localhost/"+bd;
+  private String url = "jdbc:mysql://localhost:8888//"+bd;
   private Connection conn = null;
   
   public database(){
