@@ -15,23 +15,31 @@ public class database {
   private String bd = "mysql";//BASE DE DATOS
   private String login = "root"; //USUARIO
   private String password = "root"; //CONTRASEÑA
-  private String url = "jdbc:mysql://localhost:8888//"+bd;
+  private String url = "jdbc:mysql://localhost:8889/"+bd;
   private Connection conn = null;
   
   public database(){
       try{
          //obtenemos el driver de para mysql
+          
+          System.out.println("OK 1");
          Class.forName("com.mysql.jdbc.Driver");
          //obtenemos la conexión
          conn = DriverManager.getConnection(url,login,password);
+         /*
          if (conn!=null){
+             System.out.println("OK adentro del if");
             System.out.println("OK base de datos "+bd+" listo");
-         }
+         }*/
       }catch(SQLException e){
+          System.out.println("excepcion sql");
          System.out.println(e);
       }catch(ClassNotFoundException e){
+          System.out.println("OK excepcion class");
          System.out.println(e);
       }
+      
+      
     }
 
     public Connection getConnection()

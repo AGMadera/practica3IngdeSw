@@ -24,10 +24,10 @@ public class interfaz extends javax.swing.JFrame {
         
         Actualizar_Tabla();
         //oculta columna ID
-        //jTable1.getColumnModel().getColumn(0).setMaxWidth(0);
-        //jTable1.getColumnModel().getColumn(0).setMinWidth(0);
-        //jTable1.getTableHeader().getColumnModel().getColumn(0).setMaxWidth(0);
-        //jTable1.getTableHeader().getColumnModel().getColumn(0).setMinWidth(0);
+        jTable1.getColumnModel().getColumn(0).setMaxWidth(0);
+        jTable1.getColumnModel().getColumn(0).setMinWidth(0);
+        jTable1.getTableHeader().getColumnModel().getColumn(0).setMaxWidth(0);
+        jTable1.getTableHeader().getColumnModel().getColumn(0).setMinWidth(0);
         //editor de caldas
         jTable1.getColumnModel().getColumn( 1 ).setCellEditor(new MyTableCellEditor(db,"p_nombre"));//Columna Nombre
         jTable1.getColumnModel().getColumn( 2 ).setCellEditor(new MyTableCellEditor(db,"p_apellido"));//Columna Apellido
@@ -78,16 +78,15 @@ public class interfaz extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(18, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(16, 16, 16))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 574, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 334, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
